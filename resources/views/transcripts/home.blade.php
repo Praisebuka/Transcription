@@ -22,7 +22,7 @@
 </div>
 
 <!-- Using Bootstrap classes -->
-<div class="alert alert-primary" role="alert">
+<div class="alert alert-primary">
     This is styled with Bootstrap.
 </div>
 
