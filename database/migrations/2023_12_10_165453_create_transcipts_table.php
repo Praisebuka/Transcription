@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('transcipts', function (Blueprint $table) {
             $table->id();
+            $table->longText('srt_files');
             $table->timestamps();
         });
     }

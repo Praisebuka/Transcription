@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Transcripts extends Controller
+class TranscriptController extends Controller
 {
     //
 }
