@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Google\Cloud\Speech\V1\SpeechClient;
 use App\Models\Transcipt as Transcript;
-
+use Illuminate\Support\Facades\Log;
 
 class TranscriptController extends Controller
 {
@@ -18,6 +18,11 @@ class TranscriptController extends Controller
             $request->validate([
                 'movie_name' => 'required', # File size stated.
                 'file' => 'required|mimes:mp4|max:100240', # File size stated.
+            ], [
+                'movie_name.required' => 'Please provide a movie name.',
+                'file.required' => 'Please upload a file.',
+                'file.mimes' => 'The file must be in MP4 format.',
+                'file.max' => 'The file size must not exceed 100240 kilobytes.',
             ]);
 
             $file = $request->file('file');
@@ -54,7 +59,10 @@ class TranscriptController extends Controller
                 file_put_contents(public_path($srtFileName), $srtContent);
 
                     if ($srtFileName) {
-                        $resData = Transcript::createOrInsert('transcipts');
+                        $resData = Transcript::create([ 
+                            'movie_name' => $movieName,
+                            'file' => $file,
+                        ]);
                         
                         dd($resData);
                     } else {
@@ -68,7 +76,8 @@ class TranscriptController extends Controller
 
         return response()->json(['error' => 'Transcription failed'], 500);
         } catch (\Throwable $th) {
-            throw $th;
+
+            Log::error('Error processing transcription request: ' . $th->getMessage());
 
             return response()->json(['error' => 'Error processing your request'], 400);
         }
@@ -80,6 +89,7 @@ class TranscriptController extends Controller
 
     public function getSrtContent(array $transcriptions)
     {
+
         $srtContent = '';
         $counter = 1;
 
