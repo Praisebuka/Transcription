@@ -52,6 +52,7 @@ class TranscriptController extends Controller
                     }
                 }
 
+                dd('got here');
                 # Save transcripts to an SRT format
                 $srtContent = $this->getSrtContent($transcriptions);
 
@@ -79,7 +80,7 @@ class TranscriptController extends Controller
 
             Log::error('Error processing transcription request: ' . $th->getMessage());
 
-            return response()->json(['error' => 'Error processing your request'], 400);
+            return response()->json(['Error' => $th->getMessage()], 400);
         }
 
 
