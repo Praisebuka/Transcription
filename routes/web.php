@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TranscriptController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,7 @@ Route::get('/', function () {
 Route::get('/get-transcript', function() {
     return view('transcripts.home');
 });
+
+Route::post('/get-file', [TranscriptController::class, 'startTranscriptsProcess'])->name('get started');
+
+
