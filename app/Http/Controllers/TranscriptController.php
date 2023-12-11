@@ -96,7 +96,7 @@ class TranscriptController extends Controller
 
         foreach ($transcriptions as $transcription) {
             $srtContent .= $counter++ . PHP_EOL;
-            $srtContent .= '00:00:00,000 --> 00:00:01,000' . PHP_EOL; // Adjust timing as needed
+            $srtContent .= '00:00:00,000 --> 00:00:01,000' . PHP_EOL; # Adjust timing as needed
             $srtContent .= $transcription . PHP_EOL . PHP_EOL;
         }
 
