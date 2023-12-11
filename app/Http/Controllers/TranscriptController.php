@@ -28,7 +28,7 @@ class TranscriptController extends Controller
             $file = $request->file('file');
             $movieName = $request->file('movie_name');
 
-            # Configure the Speech-to-Text client
+            # Configure the Speech-to-Text client 
             $speech = new SpeechClient([
                 'credentials' => json_decode(file_get_contents(env('GOOGLE_APPLICATION_CREDENTIALS')), true),
             ]);
