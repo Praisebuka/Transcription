@@ -25,7 +25,7 @@ class TranscriptController extends Controller
                 'file.max' => 'The file size must not exceed 100240 kilobytes.',
             ]);
 
-            $file = $request->file('file');
+            $file = $request->file('file'); 
             $movieName = $request->file('movie_name');
 
             # Configure the Speech-to-Text client 
