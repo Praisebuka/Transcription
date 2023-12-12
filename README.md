@@ -14,5 +14,5 @@ Like I said, it's a free source project and you can as well participate.
 
 Thank you for considering contributing to this application.
 
-## Contact me via:
-- **[Praisebuka](https://thepraise.netlify.app)**
+## Contact me via Socials:
+- *[Praisebuka](https://thepraise.netlify.app)*
