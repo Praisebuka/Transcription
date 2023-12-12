@@ -8,11 +8,11 @@ It's actually an open source project so feel free to hope on it incase you have 
 ## Contributing
 
 Like I said, it's a free source project and you can as well participate.
-- **[Clone the repo,]**
-- **[Run composer install and you should be good.]**
-- **[You can as well commit your changes and open a pull request and require me to review it before you merge]**
+- **Clone the repo,**
+- **Run composer install and you should be good.**
+- **You can as well commit your changes and open a pull request and require me to review it before you merge**
 
 Thank you for considering contributing to this application.
 
-## Code of Conduct
+## Contact me via:
 - **[Praisebuka](https://thepraise.netlify.app)**
