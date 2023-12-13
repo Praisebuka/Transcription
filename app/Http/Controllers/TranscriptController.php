@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Log;
 
 class TranscriptController extends Controller
 {
+
+    # Using Google Translator 
+
     public function startTranscriptsProcess(Request $request)
     {
         
@@ -86,8 +89,6 @@ class TranscriptController extends Controller
 
     }
 
-
-
     public function getSrtContent(array $transcriptions)
     {
 
@@ -101,6 +102,13 @@ class TranscriptController extends Controller
         }
 
         return $srtContent;
+    }
+
+
+    #Using Mozilla Free Source
+    public function mozillaProcess(Request $request) 
+    {
+        
     }
 
 
