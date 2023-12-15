@@ -17,7 +17,7 @@ class TranscriptController extends Controller
         
         try {
 
-            # Validate the file
+            #  the file
             $request->validate([
                 'movie_name' => 'required', # File size stated.
                 'file' => 'required|mimes:mp4|max:100240', # File size stated.
