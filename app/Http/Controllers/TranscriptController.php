@@ -17,7 +17,7 @@ class TranscriptController extends Controller
         
         try {
 
-            #  the file
+            #  The file
             $request->validate([
                 'movie_name' => 'required', # File size stated.
                 'file' => 'required|mimes:mp4|max:100240', # File size stated.
@@ -39,7 +39,7 @@ class TranscriptController extends Controller
             # The language to use
             $config = [ 'language_code' => 'en-US' ];
 
-            # Start the transctiption
+            # Start the transctiption  
             $operation = $speech->longRunningRecognize( $config, file_get_contents($file->getPathname()));
 
             $operation->pollUntilComplete();
