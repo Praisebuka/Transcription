@@ -23,7 +23,7 @@ class DeepSpeechController extends Controller
 
         // Perform speech-to-text transcription
         $transcript = $deepspeech->recognize();
-
+ 
         // Save transcript to the database
         $this->saveToDatabase($transcript);
 
@@ -32,7 +32,7 @@ class DeepSpeechController extends Controller
 
         // Download the SRT file
         $this->downloadSrtFile($srtFilePath);
-    }
+    } 
 
     public function saveToDatabase($transcript)
     {
@@ -65,7 +65,7 @@ class DeepSpeechController extends Controller
 
         // Read and output the file content
         readfile(storage_path("app/public/{$srtFilePath}"));
-    }
+    } 
 
 
     
