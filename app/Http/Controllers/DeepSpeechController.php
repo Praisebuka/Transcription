@@ -18,7 +18,7 @@ class DeepSpeechController extends Controller
         $deepspeech = new Deepspeech([
             'model' => '/path/to/your/deepspeech/model.pbmm',
             'scorer' => '/path/to/your/deepspeech/scorer.scorer',
-            'audio' => storage_path("app/public/{$videoFilePath}"),
+            'audio' => storage_path("app/public/{$videoFilePath}"),  
         ]);
 
         // Perform speech-to-text transcription
