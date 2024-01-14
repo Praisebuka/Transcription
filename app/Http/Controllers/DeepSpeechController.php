@@ -58,7 +58,7 @@ class DeepSpeechController extends Controller
 
     public function downloadSrtFile($srtFilePath)
     {
-        // Set appropriate headers for file download
+        // Set appropriate headers for file download 
         header('Content-Type: application/octet-stream');
         header('Content-Disposition: attachment; filename=' . $srtFilePath);
         header('Content-Length: ' . filesize(storage_path("app/public/{$srtFilePath}")));
