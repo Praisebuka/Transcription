@@ -51,7 +51,7 @@ class DeepSpeechController extends Controller
 
         // Save transcript to an SRT file
         Storage::disk('local')->put($srtFileName, $transcript);
-
+ 
         // Return the file path
         return $srtFileName;
     }
