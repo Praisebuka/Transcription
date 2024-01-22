@@ -36,6 +36,7 @@
             <input type="text" name="movie_name" placeholder="your movie name is?" required>
 
             <button type="submit">Get The SRT</button>
+
         </form>
 
 
