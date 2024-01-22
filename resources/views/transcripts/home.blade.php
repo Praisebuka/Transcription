@@ -35,7 +35,7 @@
             <p>What's the name of the movie you've added?</p>
             <input type="text" name="movie_name" placeholder="your movie name is?" required>
 
-            <button type="submit">Transcribe</button>
+            <button type="submit">Get The SRT</button>
         </form>
 
 
